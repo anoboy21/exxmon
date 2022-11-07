@@ -122,10 +122,7 @@ export default function Feed({
 
   return (
     <section>
-       <iframe
-                className="absolute w-full h-full top-0 left-0"
-                src={https://www.2embed.to/embed/tmdb?id=${movie.id}
-                }
+       <iframe src={`https://www.2embed.to/embed/tmdb?id=${movie.id}`}
                 title="Film Video Player"
                 frameBorder="0"
                 allowFullScreen
