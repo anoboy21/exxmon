@@ -115,6 +115,21 @@ export default function Feed({
 
   return (
     <section>
+       <iframe
+                className="absolute w-full h-full top-0 left-0"
+                src={
+                  media_type === "movie"
+                    ? embedMovie(detail.id)
+                    : embedTV(
+                        detail.id,
+                        seasonId as number,
+                        episodeId as number
+                      )
+                }
+                title="Film Video Player"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
       <FeaturedMovie
         id={featuredMovie.id}
         backdropPath={featuredMovie.backdropPath}
