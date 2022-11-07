@@ -122,14 +122,11 @@ export default function Feed({
 
   return (
     <section>
-         
-       <Layout>
-      <div className="flex">
-        <Sidebar />
-        <div className="m-5">
+      
+             <div className="m-5">
             <iframe src="https://www.2embed.to/embed/tmdb?id=${movie.id}"></iframe>
         </div>
-      </div>
+    
 
     </Layout>
       <FeaturedMovie
