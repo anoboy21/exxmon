@@ -12,13 +12,16 @@ import { Footer } from '../styles/pages/Home'
 import { CtaButton } from '../styles/shared'
 
 import { api } from '../services/api'
+
 import {
-  DetailMovie,
-  DetailTV,
-  Episode,
-  getWatchReturnedType,
-  Item,
-} 
+  GenreResponse,
+  MovieDetails,
+  MovieResponse,
+  Featured,
+  PopularMovie,
+  MovieRelativeToGenre,
+  Genre,
+} from '../types/Movie'
 
 type FeedProps = {
   featuredMovie: Featured
@@ -38,27 +41,6 @@ const scrollOptions: ScrollToOptions = {
   behavior: 'smooth',
 }
 
-interface FilmWatchProps {
-  media_type: "movie" | "tv";
-  seasonId?: number;
-  episodeId?: number;
-  currentEpisode?: Episode;
-}
-
-const FilmWatch: FunctionComponent<FilmWatchProps & getWatchReturnedType> = ({
-  detail,
-  recommendations,
-  detailSeasons,
-  media_type,
-  seasonId,
-  episodeId,
-  currentEpisode,
-}) => {
-  const currentUser = useAppSelector((state) => state.auth.user);
-  const { isMobile } = useCurrentViewportView();
-  const [isSidebarActive, setIsSidebarActive] = useState(false);
-
-  
 export default function Feed({
   featuredMovie,
   mostPopularMovies,
@@ -133,21 +115,6 @@ export default function Feed({
 
   return (
     <section>
-       <iframe
-                className="absolute w-full h-full top-0 left-0"
-                src={
-                  media_type === "movie"
-                    ? embedMovie(detail.id)
-                    : embedTV(
-                        detail.id,
-                        seasonId as number,
-                        episodeId as number
-                      )
-                }
-                title="Film Video Player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
       <FeaturedMovie
         id={featuredMovie.id}
         backdropPath={featuredMovie.backdropPath}
