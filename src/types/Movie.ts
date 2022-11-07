@@ -16,33 +16,7 @@ export type Episode = {
   still_path: string;
   vote_average: number;
   vote_count: number;
-  crew: {
-    department: string;
-    job: string;
-    credit_id: string;
-    adult: boolean;
-    gender: number;
-    id: number;
-    known_for_department: string;
-    name: string;
-    original_name: string;
-    popularity: number;
-    profile_path: string;
-  }[];
-  guest_stars: {
-    credit_id: string;
-    order: number;
-    character: string;
-    adult: boolean;
-    gender: number;
-    id: number;
-    known_for_department: string;
-    name: string;
-    original_name: string;
-    popularity: number;
-    profile_path: string;
-  }[];
-}
+  }
 
 export type Item = {
   poster_path: string;
@@ -74,7 +48,6 @@ export type Item = {
   // Person
   profile_path?: string;
 }
-
 
 export type Movie = {
   adult: boolean
