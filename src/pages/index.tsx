@@ -30,7 +30,7 @@ type FeedProps = {
   topRatedMovies: PopularMovie[]
   genres: Genre[]
 }
-type FilmWatchProps {
+type FilmWatchProps = {
   media_type: "movie" | "tv";
   seasonId?: number;
   episodeId?: number;
