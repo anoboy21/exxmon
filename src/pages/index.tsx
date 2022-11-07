@@ -12,7 +12,13 @@ import { Footer } from '../styles/pages/Home'
 import { CtaButton } from '../styles/shared'
 
 import { api } from '../services/api'
-
+import {
+  DetailMovie,
+  DetailTV,
+  Episode,
+  getWatchReturnedType,
+  Item,
+} 
 import {
   GenreResponse,
   MovieDetails,
@@ -41,6 +47,27 @@ const scrollOptions: ScrollToOptions = {
   behavior: 'smooth',
 }
 
+interface FilmWatchProps {
+  media_type: "movie" | "tv";
+  seasonId?: number;
+  episodeId?: number;
+  currentEpisode?: Episode;
+}
+
+const FilmWatch: FunctionComponent<FilmWatchProps & getWatchReturnedType> = ({
+  detail,
+  recommendations,
+  detailSeasons,
+  media_type,
+  seasonId,
+  episodeId,
+  currentEpisode,
+}) => {
+  const currentUser = useAppSelector((state) => state.auth.user);
+  const { isMobile } = useCurrentViewportView();
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+
+  
 export default function Feed({
   featuredMovie,
   mostPopularMovies,
