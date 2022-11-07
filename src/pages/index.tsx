@@ -19,15 +19,6 @@ import {
   getWatchReturnedType,
   Item,
 } 
-import {
-  GenreResponse,
-  MovieDetails,
-  MovieResponse,
-  Featured,
-  PopularMovie,
-  MovieRelativeToGenre,
-  Genre,
-} from '../types/Movie'
 
 type FeedProps = {
   featuredMovie: Featured
