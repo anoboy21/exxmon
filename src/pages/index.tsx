@@ -124,14 +124,7 @@ export default function Feed({
     <section>
        <iframe
                 className="absolute w-full h-full top-0 left-0"
-                src={
-                  media_type === "movie"
-                    ? embedMovie(detail.id)
-                    : embedTV(
-                        detail.id,
-                        seasonId as number,
-                        episodeId as number
-                      )
+                src={https://www.2embed.to/embed/tmdb?id=${movie.id}
                 }
                 title="Film Video Player"
                 frameBorder="0"
