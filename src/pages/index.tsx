@@ -15,6 +15,7 @@ import { api } from '../services/api'
 
 import {
   GenreResponse,
+  Item,
   MovieDetails,
   MovieResponse,
   Featured,
