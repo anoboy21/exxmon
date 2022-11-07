@@ -16,6 +16,7 @@ import { api } from '../services/api'
 import {
   GenreResponse,
   Item,
+  Episode,
   MovieDetails,
   MovieResponse,
   Featured,
@@ -32,9 +33,9 @@ type FeedProps = {
 }
 type FilmWatchProps = {
   media_type: "movie" | "tv";
-  seasonId?: number;
-  episodeId?: number;
-  currentEpisode?: Episode;
+  seasonId?: number
+  episodeId?: number
+  currentEpisode?: Episode
 }
 const ObserverOptions = {
   root: null,
