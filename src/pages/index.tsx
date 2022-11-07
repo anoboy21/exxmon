@@ -32,7 +32,7 @@ type FeedProps = {
   genres: Genre[]
 }
 type FilmWatchProps = {
-  media_type: "movie" | "tv";
+  media_type: "movie" | "tv"
   seasonId?: number
   episodeId?: number
   currentEpisode?: Episode
