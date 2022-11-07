@@ -122,11 +122,16 @@ export default function Feed({
 
   return (
     <section>
-       <iframe src={`https://www.2embed.to/embed/tmdb?id=${movie.id}`}
-                title="Film Video Player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
+         
+       <Layout>
+      <div className="flex">
+        <Sidebar />
+        <div className="m-5">
+            <iframe src="https://www.2embed.to/embed/tmdb?id=${movie.id}"></iframe>
+        </div>
+      </div>
+
+    </Layout>
       <FeaturedMovie
         id={featuredMovie.id}
         backdropPath={featuredMovie.backdropPath}
