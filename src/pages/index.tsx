@@ -30,7 +30,12 @@ type FeedProps = {
   topRatedMovies: PopularMovie[]
   genres: Genre[]
 }
-
+type FilmWatchProps {
+  media_type: "movie" | "tv";
+  seasonId?: number;
+  episodeId?: number;
+  currentEpisode?: Episode;
+}
 const ObserverOptions = {
   root: null,
   rootMargin: '0px',
