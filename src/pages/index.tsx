@@ -119,14 +119,13 @@ export default function Feed({
       getNextMovies()
     }
   }, [isVisible])
-
+<div className="m-5">
+            <iframe src="https://www.2embed.to/embed/tmdb?id=${movie.id}"></iframe>
+        </div>
   return (
     <section>
       
-             <div className="m-5">
-            <iframe src="https://www.2embed.to/embed/tmdb?id=${movie.id}"></iframe>
-        </div>
-    
+               
 
     </Layout>
       <FeaturedMovie
