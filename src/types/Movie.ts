@@ -6,47 +6,47 @@ export type MovieResponse = {
 }
 
 export type Episode = {
-  air_date: string;
-  episode_number: number;
-  id: number;
-  name: string;
-  overview: string;
-  production_code: string;
-  season_number: number;
-  still_path: string;
-  vote_average: number;
-  vote_count: number;
+  air_date: string
+  episode_number: number
+  id: number
+  name: string
+  overview: string
+  production_code: string
+  season_number: number
+  still_path: string
+  vote_average: number
+  vote_count: number
   }
 
 export type Item = {
-  poster_path: string;
-  overview: string;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  backdrop_path: string;
-  popularity: number;
-  vote_count: number;
-  vote_average: number;
+  poster_path: string
+  overview: string
+  genre_ids: number[]
+  id: number
+  original_language: string
+  backdrop_path: string
+  popularity: number
+  vote_count: number
+  vote_average: number
 
   // Additional props
-  media_type: "movie" | "tv" | "person";
+  media_type: "movie" | "tv" | "person"
 
   // Movie items
-  release_date?: string;
-  original_title?: string;
-  title?: string;
-  adult?: boolean;
-  video?: boolean;
+  release_date?: string
+  original_title?: string
+  title?: string
+  adult?: boolean
+  video?: boolean
 
   // TV Show items
-  first_air_date?: string;
-  original_name?: string;
-  origin_country?: string[];
-  name?: string;
+  first_air_date?: string
+  original_name?: string
+  origin_country?: string[]
+  name?: string
 
   // Person
-  profile_path?: string;
+  profile_path?: string
 }
 
 export type Movie = {
